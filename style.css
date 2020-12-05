@@ -1,0 +1,148 @@
+@media all and (min-width: 400px) {
+    body {
+        font-size: 10px;
+    }
+}
+@media all and (min-width: 800px) {
+    body {
+        font-size: 16px;
+    }
+}
+html, body {
+  background: black;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.hidden {
+  display: none;
+}
+.tank-chart {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  position: absolute;
+  height: 96%;
+  width: 96%;
+  left: 2%;
+  top: 2%;
+  background-color: grey;
+}
+.tank-bar {
+  height: 100%;
+  width: 200px;
+  position: relative;
+}
+.tank-card {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  height: 100%;
+  margin-left: 5%;
+}
+.tank-card-region {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 10%;
+  border-top: solid black 1px;
+}
+.tank-card-region.label {
+  flex-direction: row;
+  z-index: 30;
+}
+.legend {
+  text-align: center;
+  font-size: 120%;
+}
+.tankname, .tankdata {
+  color: black;
+  z-index: 40;
+}
+.tank-graph {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  margin-left: 5%;
+  height: 100%;
+  background-color: cyan;
+  color: green;
+  z-index: 20;
+  opacity: 0.7;
+}
+.tank-graph-percent {
+  postion: absolute;
+  top: 0;
+  text-align: center;
+  font-size: 120%;
+}
+.tank-graph-volume {
+  position: absolute;
+  top: 50;
+  align: center;
+  content-align: center;
+  text-align: center;
+  font-size: 120%;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+}
+.alert {
+  animation: blink 1s;
+  animation-iteration-count: infinite;
+  color: orange;
+  font-weight: bold;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 96%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  min-height: 100vh;
+  z-index: 100;
+}
+#popup .image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: auto;
+}
+
+#popup .nav {
+  height: 100%;
+  z-index: 110;
+}
+#popup .left {
+  position: absolute;
+  left: 0;
+  width: 20%;
+}
+#popup .right {
+  position: absolute;
+  right: 0;
+  width: 20%;
+}
+
